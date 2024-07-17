@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Blocker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #131619;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+           
+            max-height: 375px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: #131619;
+           border: 1px solid white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .topItem {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-bottom: 2px solid white;
+        }
+
+        .topItem h1 {
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            margin: 0;
+            color: white;
+            font-size: 36px;
+           
+            padding-bottom: 10px;
+        }
+
+        .topItem img {
+    height: 50px;
+    margin-right: 10px;  
+    padding-bottom: 10px;
+       }
+
+        .topItemMain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .Info {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .Info p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .Info h4 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        #btn {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px 20px;
+           
+            background-color: rgb(212, 66, 66);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #btn:hover {
+            background-color: rgb(241, 88, 88);
+        }
+
+        .blocked-list {
+            margin-top: 20px;
+        }
+
+        .blocked-list h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .blocked-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+
+        .blocked-list li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topItem">
+            <img src="prohibition.png" alt="Web Blocker Logo">
+            <h1>Web Blocker</h1>
+        </div>
+            <div class="topItemMain">
+                <div class="Info">
+                    <p>You are currently on </p>
+                    <h4 id="url"></h4>
+                </div>
+                <button id="btn">BLOCK THIS URL</button>
+            </div>
+        
+        <div class="blocked-list">
+            <h2>Blocked Websites:</h2>
+            <ul id="blocked-websites"></ul>
+        </div>
+
+        <div class="bottomItem">
+        </div>
+        
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

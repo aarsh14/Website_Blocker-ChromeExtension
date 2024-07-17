@@ -1,0 +1,41 @@
+{
+    "name": "Web Blocker",
+    "description": "This chrome extension blocks selected websites for 24 hrs ",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./popup.html",
+         "default_icon":"./ad.png"
+    },
+
+    "icons":{
+        "16":"./ad.png",
+        "48":"./ad.png",
+        "128":"./ad.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": 
+                ["<all_urls>"],     
+            
+            "css": 
+                ["ContentScript.css"],
+            
+            "js": 
+                ["contentScript.js"]
+            
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
